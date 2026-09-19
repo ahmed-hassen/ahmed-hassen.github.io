@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -158,6 +158,32 @@
           <a href="https://www.sciencedirect.com/science/article/pii/S0957417426027818" target="_blank" rel="noopener">Read the paper</a>
           <a href="6d-pose.pdf">PDF</a>
         </div>
+      </article>
+
+      <article class="card card-featured">
+        <div class="card-media">
+          <video controls muted loop playsinline preload="metadata" src="rl-video.mp4"
+                 aria-label="Reinforcement learning policy for variable admittance control">
+            Your browser can't play this video. <a href="rl-video.mp4">Download it instead.</a>
+          </video>
+        </div>
+        <h3 class="card-title">Safety-aware reinforcement learning for variable admittance control in robotic curtain wall installation</h3>
+        <p class="card-venue">
+          Ph.D. research project &middot; Monash University
+        </p>
+        <p class="card-body">
+          Contact-rich facade installation formulated as a variable admittance
+          control problem. A Soft Actor-Critic policy learns 6D Cartesian
+          stiffness gains online to regulate contact force, with passivity-inspired
+          energy constraints and force-limiting overrides for safety. It was
+          benchmarked against PPO, TD3 and DDPG in MuJoCo, and the selected SAC
+          policy reached 93.8% success and transferred zero-shot to a UR5 testbed.
+        </p>
+        <ul class="tags tags-sm">
+          <li>Reinforcement learning</li>
+          <li>Admittance control</li>
+          <li>Sim-to-real</li>
+        </ul>
       </article>
 
     </div>

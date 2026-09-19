@@ -372,6 +372,14 @@ code {
   border-radius: 8px;
   padding: .5rem;
 }
+.card-media video {
+  display: block;
+  width: 100%;
+  max-height: 22rem;
+  object-fit: contain;
+  background: #000;
+  border-radius: 4px;
+}
 .card-media img {
   width: 100%;
   max-height: 22rem;      /* keeps near-square diagrams from dominating the card */
