@@ -327,6 +327,16 @@ code {
 }
 .card:hover { transform: translateY(-3px); border-color: var(--text-muted); }
 
+/* Paper diagrams are white-background JPEGs, so the frame stays white in dark mode. */
+.card-media {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .5rem;
+}
+.card-media img { width: 100%; }
+
 .card-title { margin: 0; font-size: 1.1rem; }
 
 .card-body {
