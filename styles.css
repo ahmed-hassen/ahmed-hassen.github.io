@@ -111,9 +111,11 @@ code {
 }
 .site-header.is-stuck { border-bottom-color: var(--border); }
 
-/* Phones: no header, so the content starts at the top of the screen. */
+/* Phones: hide the name and section links; only the theme toggle stays. */
 @media (max-width: 40rem) {
-  .site-header { display: none; }
+  .nav-brand,
+  .nav-links { display: none; }
+  .theme-toggle { margin-left: auto; }
 }
 
 .nav {
