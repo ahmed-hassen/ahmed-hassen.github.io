@@ -111,11 +111,46 @@ code {
 }
 .site-header.is-stuck { border-bottom-color: var(--border); }
 
-/* Phones: hide the name and section links; only the theme toggle stays. */
+/* Menu button (three lines). Hidden on wide screens, shown on phones. */
+.menu-toggle {
+  display: none;
+  flex: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.menu-toggle-bars {
+  width: 1rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  box-shadow: 0 -5px 0 var(--text), 0 5px 0 var(--text);
+}
+
+/* Phones: the links collapse into a dropdown opened by the menu button. */
 @media (max-width: 40rem) {
-  .nav-brand,
-  .nav-links { display: none; }
-  .theme-toggle { margin-left: auto; }
+  .menu-toggle { display: grid; }
+
+  .nav-links {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: .25rem;
+  }
+  .nav.is-open .nav-links { display: flex; }
+
+  .nav-links li { border-top: 1px solid var(--border); }
+  .nav-links a {
+    display: block;
+    padding: .7rem 0;
+    font-size: 1rem;
+  }
 }
 
 .nav {

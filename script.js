@@ -58,6 +58,30 @@
     sections.forEach(function (section) { observer.observe(section); });
   }
 
+  /* Phone menu ---------------------------------------------------- */
+
+  var nav = document.querySelector('.nav');
+  var menuToggle = document.querySelector('.menu-toggle');
+
+  if (nav && menuToggle) {
+    var setMenu = function (open) {
+      nav.classList.toggle('is-open', open);
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!nav.classList.contains('is-open'));
+    });
+
+    // Picking a section closes the menu; Escape does too.
+    nav.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMenu(false);
+    });
+  }
+
   /* Footer year --------------------------------------------------- */
 
   var year = document.getElementById('year');
