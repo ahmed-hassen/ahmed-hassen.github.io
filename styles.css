@@ -182,7 +182,7 @@ code {
 .hero {
   max-width: var(--page);
   margin-inline: auto;
-  padding: clamp(3.5rem, 12vh, 7rem) var(--gutter) clamp(2.5rem, 7vh, 4rem);
+  padding: 1rem var(--gutter) clamp(2.5rem, 7vh, 4rem);
 }
 
 .hero-eyebrow {
