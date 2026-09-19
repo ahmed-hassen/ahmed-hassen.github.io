@@ -290,8 +290,25 @@ code {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;   /* one publication per row, stacked: image, then text */
+  grid-template-columns: 1fr;   /* one publication per row, stacked vertically */
   gap: 1.5rem;
+}
+
+/* Wide screens: image on the left, text on the right. Stacks on narrow screens. */
+@media (min-width: 46rem) {
+  .card-featured {
+    display: grid;
+    grid-template-columns: 17rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    row-gap: .75rem;
+    align-content: start;
+  }
+  .card-featured > * { grid-column: 2; }
+  .card-featured > .card-media {
+    grid-column: 1;
+    grid-row: 1 / span 5;
+    align-self: start;
+  }
 }
 
 .card {
