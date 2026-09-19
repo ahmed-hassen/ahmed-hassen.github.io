@@ -369,6 +369,25 @@ code {
 
 .subhead-first { margin-top: 0; }
 
+/* Units taught: boxes side by side, wrapping to fill the full width. */
+.unit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.unit-list li {
+  flex: 1 1 14rem;
+  padding: .7rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: .925rem;
+  color: var(--text-muted);
+}
+
 .pub-list {
   margin: 0;
   padding-left: 1.1rem;
