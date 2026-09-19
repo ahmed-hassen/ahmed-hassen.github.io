@@ -355,6 +355,8 @@ code {
   color: var(--text-muted);
 }
 
+.subhead-first { margin-top: 0; }
+
 .pub-list {
   margin: 0;
   padding-left: 1.1rem;
