@@ -400,6 +400,21 @@ code {
   max-width: var(--measure);
 }
 
+/* Skills */
+
+.skills {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: .9rem clamp(1rem, 4vw, 2rem);
+  margin: 0;
+}
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: var(--text-muted); font-size: .925rem; max-width: 44rem; }
+@media (max-width: 38rem) {
+  .skills { grid-template-columns: 1fr; gap: .15rem; }
+  .skills dd { margin-bottom: .75rem; }
+}
+
 /* Contact */
 
 .contact-lead {
