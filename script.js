@@ -59,6 +59,24 @@
     });
   }
 
+  /* Card videos: play at the speed in data-speed --------------------- */
+
+  document.querySelectorAll('video[data-speed]').forEach(function (video) {
+    var speed = parseFloat(video.dataset.speed) || 1;
+    var setSpeed = function () {
+      video.defaultPlaybackRate = speed;
+      video.playbackRate = speed;
+    };
+    setSpeed();
+    video.addEventListener('loadedmetadata', setSpeed);
+
+    // Visitors who ask for reduced motion get a paused video they can start.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.autoplay = false;
+      video.pause();
+    }
+  });
+
   /* Footer year --------------------------------------------------- */
 
   var year = document.getElementById('year');
