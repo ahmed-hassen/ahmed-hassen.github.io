@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ahmed — Developer</title>
-<meta name="description" content="Personal site and portfolio of Ahmed.">
+<title>Ahmed Yimam Hassen — Robotics and Computer Vision Researcher</title>
+<meta name="description" content="Ph.D. researcher at Monash University working on robot perception and learning-based control: semantic segmentation, 6D pose estimation and reinforcement learning for contact-rich manipulation.">
 
-<!-- Social preview. Replace the URL once the site is live. -->
-<meta property="og:title" content="Ahmed — Developer">
-<meta property="og:description" content="Personal site and portfolio of Ahmed.">
+<meta property="og:title" content="Ahmed Yimam Hassen — Robotics and Computer Vision Researcher">
+<meta property="og:description" content="Ph.D. researcher at Monash University working on robot perception and learning-based control.">
 <meta property="og:type" content="website">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 <link rel="stylesheet" href="styles.css">
 <script>
   // Applied before paint so the page never flashes the wrong theme.
@@ -32,6 +31,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
@@ -44,10 +44,12 @@
 
   <section class="hero" id="top">
     <p class="hero-eyebrow">Hi, I'm</p>
-    <h1 class="hero-title">Ahmed</h1>
+    <h1 class="hero-title">Ahmed Yimam Hassen</h1>
     <p class="hero-tagline">
-      Software developer. I build things for the web &mdash; and occasionally
-      take them apart to see how they work.
+      Ph.D. researcher in robotics and computer vision at Monash University.
+      I work on perception and learning-based control for contact-rich
+      manipulation, from segmentation and 6D pose estimation to reinforcement
+      learning and sim-to-real transfer.
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#publications">See my work</a>
@@ -60,25 +62,32 @@
     <div class="about">
       <div class="about-text">
         <p>
-          Write two or three sentences here about who you are and what you care
-          about. What do you build? What problems do you like working on? What
-          are you learning right now?
+          My research is on Physical AI: getting robots to see, decide and
+          apply the right force in real environments. My Ph.D. work applies
+          this to robotic curtain wall installation on high-rise buildings,
+          covering lightweight segmentation, markerless 6D pose estimation and
+          safe, compliant control learned with reinforcement learning.
         </p>
         <p>
-          Keep it conversational &mdash; this reads better than a list of
-          buzzwords, and it's the part people actually remember.
+          I come from mechanical, aerospace and control engineering, and I'm
+          increasingly interested in vision-language-action models and
+          imitation learning for generalist manipulation. I also teach
+          engineering at Monash and co-supervise student research projects.
         </p>
       </div>
       <div class="about-skills">
         <h3 class="about-skills-title">Working with</h3>
         <ul class="tags">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
+          <li>PyTorch</li>
+          <li>MuJoCo</li>
+          <li>ROS 2</li>
+          <li>Reinforcement learning</li>
+          <li>Semantic segmentation</li>
+          <li>6D pose estimation</li>
+          <li>Admittance control</li>
           <li>Python</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Git</li>
-          <li>SQL</li>
+          <li>C++</li>
+          <li>MATLAB</li>
           <li>Docker</li>
         </ul>
       </div>
@@ -95,12 +104,14 @@
                alt="LANet architecture: input, stem, MBConv stages, an efficient transformer stage, two channel attention modules and a segmentation head">
         </a>
         <h3 class="card-title">Lightweight segmentation model for automated facade installation in high-rise buildings</h3>
+        <p class="card-venue">
+          Hassen, Arashpour &amp; Abdi &middot; <em>Advanced Engineering Informatics</em>, 2025
+        </p>
         <p class="card-body">
-          A lightweight attention network that segments curtain wall module
-          frames so a robot can find installation locations on high-rise
-          buildings. MBConv stages, an efficient transformer and channel
-          attention modules keep it fast enough for real-time use on site.
-          Published in <em>Advanced Engineering Informatics</em>, 2025.
+          LANet, a lightweight attention network that segments curtain wall
+          module frames so a robot can find installation locations. It reaches
+          84.26% mIoU with 1.92M parameters at 262 FPS on GPU and 19 FPS on
+          CPU, matching heavier baselines at about one-seventh the parameters.
         </p>
         <ul class="tags tags-sm">
           <li>Semantic segmentation</li>
@@ -119,11 +130,16 @@
                alt="Two-stage pipeline: LANet segments the input image, then rule-based corner extraction and a PnP solver estimate the reference panel pose, which is propagated to the target slot">
         </a>
         <h3 class="card-title">Lightweight vision-based 6D pose estimation of curtain wall module installation slot</h3>
+        <p class="card-venue">
+          Hassen, Arashpour &amp; Abdi &middot; <em>Expert Systems with Applications</em>, 2026
+        </p>
         <p class="card-body">
-          A two-stage pipeline for locating where a curtain wall module goes.
-          LANet segments the scene, corners are extracted with a rule-based
-          algorithm, and a PnP solver estimates the pose of a reference panel,
-          which is propagated to the target installation slot.
+          A markerless, monocular pipeline for locating where a curtain wall
+          module goes. LANet segments the scene, corners are extracted with a
+          rule-based algorithm, and a PnP solver estimates the pose of a
+          reference panel that is propagated to the target slot. A learned
+          SE(3) residual correction cuts PnP translation error about 6.7&times;
+          and rotation error about 14.3&times;.
         </p>
         <ul class="tags tags-sm">
           <li>6D pose estimation</li>
@@ -137,6 +153,39 @@
       </article>
 
     </div>
+
+    <h3 class="subhead">Under review</h3>
+    <ul class="pub-list">
+      <li>
+        Hassen, A. Y., Johns, B., Arashpour, M., &amp; Abdi, E.
+        Facade semantic segmentation for curtain wall installation robotics: a
+        markerless 3D pose estimation.
+        <em>Robotics and Autonomous Systems</em>.
+      </li>
+      <li>
+        Hassen, A. Y., Arashpour, M., &amp; Abdi, E.
+        Reinforcement learning-based variable admittance control for robotic
+        curtain wall module installation.
+        <em>IEEE Transactions on Automation Science and Engineering</em>.
+      </li>
+    </ul>
+
+    <h3 class="subhead">Conference papers</h3>
+    <ul class="pub-list">
+      <li>
+        Biyogo, N. V., Shi, P., Saeed, A., Hassen, A. Y., &amp; Babansoro, M.
+        (2023). Study on attitude deviation of spacecraft subjected to random
+        disturbance torque based on covariance analysis.
+        <em>6th International Conference on Aeronautical, Aerospace and
+        Mechanical Engineering (AAME)</em>.
+      </li>
+      <li>
+        Hassen, A. Y., &amp; Gong, S. (2022). Adaptive-fuzzy-logic-based
+        controller for attitude control of solar sail spacecraft.
+        <em>28th International Symposium on Space Flight Dynamics (ISSFD)</em>,
+        Beijing, China.
+      </li>
+    </ul>
   </section>
 
   <section class="section" id="experience">
@@ -144,26 +193,109 @@
     <ol class="timeline">
 
       <li class="timeline-item">
-        <div class="timeline-meta">2024 &ndash; Present</div>
+        <div class="timeline-meta">2024 &ndash; 2027</div>
         <div class="timeline-body">
-          <h3 class="timeline-role">Your Role</h3>
-          <p class="timeline-org">Company or Organization</p>
+          <h3 class="timeline-role">Ph.D. Researcher</h3>
+          <p class="timeline-org">Monash University, Australia</p>
           <p class="timeline-desc">
-            What you were responsible for and what changed because you were
-            there. Concrete numbers land well if you have them.
+            Robot perception and control for curtain wall installation. Built
+            LANet (84.26% mIoU, 262 FPS), a markerless 6D pose pipeline
+            (2.24 mm median in-plane error), and a safety-aware reinforcement
+            learning framework for variable admittance control. The selected
+            SAC policy reached 93.8% success and transferred zero-shot to a UR5
+            testbed. Built simulation environments in MuJoCo and Gymnasium and
+            collected the training datasets.
           </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">2025 &ndash; Present</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Student Research Supervision</h3>
+          <p class="timeline-org">Monash University, Australia</p>
+          <p class="timeline-desc">
+            Day-to-day technical mentor for three Final Year Project students
+            and co-supervisor of a new Ph.D. student. Session chair at the
+            Final Year Project student conference in 2025 and 2026.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">Jul 2025 &ndash; Present</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Assistant Lecturer (part-time)</h3>
+          <p class="timeline-org">Monash University, Australia</p>
+          <p class="timeline-desc">
+            Design engineering tutorials, exam problems and assessment rubrics,
+            and give students feedback and consultation on control theory and
+            mathematics.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">Jul &ndash; Dec 2024</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Teaching Associate (casual)</h3>
+          <p class="timeline-org">Monash University, Australia</p>
+          <p class="timeline-desc">
+            Ran laboratory sessions and tutorials for undergraduate engineering
+            courses.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">2021 &ndash; 2023</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Graduate Researcher</h3>
+          <p class="timeline-org">Beihang University, China</p>
+          <p class="timeline-desc">
+            Master's research on attitude control of solar sail spacecraft using
+            control vanes, including adaptive fuzzy logic controllers that
+            counter random disturbances, simulated in MATLAB.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="section" id="education">
+    <h2 class="section-title">Education</h2>
+    <ol class="timeline">
+
+      <li class="timeline-item">
+        <div class="timeline-meta">2024 &ndash; 2027</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Ph.D., Mechanical Engineering</h3>
+          <p class="timeline-org">Monash University, Australia</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">2021 &ndash; 2023</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Master of Engineering, Aerospace Science and Technology</h3>
+          <p class="timeline-org">Beihang University, China</p>
         </div>
       </li>
 
       <li class="timeline-item">
         <div class="timeline-meta">2022 &ndash; 2024</div>
         <div class="timeline-body">
-          <h3 class="timeline-role">Previous Role</h3>
-          <p class="timeline-org">Company or Organization</p>
-          <p class="timeline-desc">
-            Another entry. Education fits here too &mdash; degree, school, and
-            anything notable you did while there.
-          </p>
+          <h3 class="timeline-role">Master of Business Administration (part-time)</h3>
+          <p class="timeline-org">American College of Technology, Ethiopia</p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-meta">2017 &ndash; 2021</div>
+        <div class="timeline-body">
+          <h3 class="timeline-role">Bachelor of Engineering, Mechanical Design, Manufacturing and Automation</h3>
+          <p class="timeline-org">University of Electronic Science and Technology of China</p>
         </div>
       </li>
 
@@ -173,20 +305,19 @@
   <section class="section" id="contact">
     <h2 class="section-title">Contact</h2>
     <p class="contact-lead">
-      The fastest way to reach me is email. I'm happy to talk about interesting
-      problems, collaborations, or work.
+      I'm happy to talk about research, collaborations, or robotics and
+      computer vision work. Email is the best way to reach me.
     </p>
     <ul class="contact-links">
-      <li><a href="mailto:you@example.com">you@example.com</a></li>
-      <li><a href="https://github.com/yourusername">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+      <li><a href="mailto:ahmed.hassen@outlook.com.au">ahmed.hassen@outlook.com.au</a></li>
+      <li><a href="https://linkedin.com/in/ahassenshen" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year">2026</span> Ahmed. Built with plain HTML and CSS.</p>
+  <p>&copy; <span id="year">2026</span> Ahmed Yimam Hassen. Built with plain HTML and CSS.</p>
 </footer>
 
 <script src="script.js"></script>
