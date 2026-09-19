@@ -131,11 +131,13 @@ code {
   box-shadow: 0 -5px 0 var(--text), 0 5px 0 var(--text);
 }
 
-/* Phones: the links collapse into a dropdown opened by the menu button. */
+/* Phones: the links collapse into a dropdown opened by the menu button.
+   Selectors start with .nav so they outrank the plain .nav-links rules that
+   come later in this file. */
 @media (max-width: 40rem) {
   .menu-toggle { display: grid; }
 
-  .nav-links {
+  .nav .nav-links {
     display: none;
     order: 3;
     width: 100%;
@@ -145,8 +147,8 @@ code {
   }
   .nav.is-open .nav-links { display: flex; }
 
-  .nav-links li { border-top: 1px solid var(--border); }
-  .nav-links a {
+  .nav .nav-links li { border-top: 1px solid var(--border); }
+  .nav .nav-links a {
     display: block;
     padding: .7rem 0;
     font-size: 1rem;
