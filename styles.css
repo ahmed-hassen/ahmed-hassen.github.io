@@ -1,6 +1,5 @@
 /* ---------------------------------------------------------------
-   Tokens. Light palette lives on :root; dark overrides only the
-   values, so every rule below is written once and works in both.
+   Tokens. Light theme only.
    --------------------------------------------------------------- */
 
 :root {
@@ -14,25 +13,11 @@
   --shadow:      0 1px 2px rgba(28, 27, 25, .05),
                  0 8px 24px rgba(28, 27, 25, .05);
 
-  --measure: 34rem;      /* comfortable reading width */
-  --page:    64rem;      /* max content width */
+  --measure: none;       /* text fills the page width, so every section lines up */
+  --page:    54rem;      /* max content width */
   --gutter:  clamp(1.25rem, 5vw, 3rem);
 
   color-scheme: light;
-}
-
-/* Light is the default. Dark only applies when the visitor picks it with the toggle. */
-:root[data-theme="dark"] {
-  --bg:          #14151a;
-  --surface:     #1b1d23;
-  --border:      #2e313a;
-  --text:        #e9e8e4;
-  --text-muted:  #9a978f;
-  --accent:      #7fc9a0;
-  --accent-soft: #1e2a24;
-  --shadow:      0 1px 2px rgba(0, 0, 0, .3),
-                 0 8px 24px rgba(0, 0, 0, .25);
-  color-scheme: dark;
 }
 
 /* ---------------------------------------------------------------
@@ -190,35 +175,6 @@ code {
 .nav-links a:hover,
 .nav-links a.is-active { color: var(--text); }
 
-.theme-toggle {
-  flex: none;
-  width: 2.1rem;
-  height: 2.1rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  cursor: pointer;
-  transition: border-color .15s ease;
-}
-.theme-toggle:hover { border-color: var(--text-muted); }
-
-/* Crescent in light mode (click for dark), full disc in dark mode.
-   Same guard pattern as the palette above, so the toggle wins both ways. */
-.theme-toggle-icon {
-  width: .95rem;
-  height: .95rem;
-  border-radius: 50%;
-  background: var(--text);
-  box-shadow: inset -.28rem -.28rem 0 0 var(--surface);
-  transition: box-shadow .25s ease, transform .25s ease;
-}
-:root[data-theme="dark"] .theme-toggle-icon {
-  box-shadow: inset 0 0 0 0 var(--surface);
-  transform: scale(.85);
-}
-
 /* ---------------------------------------------------------------
    Hero
    --------------------------------------------------------------- */
@@ -369,7 +325,7 @@ code {
 }
 .card:hover { transform: translateY(-3px); border-color: var(--text-muted); }
 
-/* Paper diagrams are white-background JPEGs, so the frame stays white in dark mode. */
+/* Paper diagrams are white-background JPEGs, so the frame stays white. */
 .card-media {
   display: block;
   background: #fff;
@@ -405,7 +361,7 @@ code {
 .pub-list {
   margin: 0;
   padding-left: 1.1rem;
-  max-width: 44rem;
+  max-width: var(--measure);
   font-size: .925rem;
   color: var(--text-muted);
 }
@@ -473,7 +429,7 @@ code {
   margin: 0;
 }
 .skills dt { font-weight: 600; }
-.skills dd { margin: 0; color: var(--text-muted); font-size: .925rem; max-width: 44rem; }
+.skills dd { margin: 0; color: var(--text-muted); font-size: .925rem; max-width: var(--measure); }
 @media (max-width: 38rem) {
   .skills { grid-template-columns: 1fr; gap: .15rem; }
   .skills dd { margin-bottom: .75rem; }

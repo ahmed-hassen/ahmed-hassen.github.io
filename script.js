@@ -3,29 +3,6 @@
 (function () {
   'use strict';
 
-  var root = document.documentElement;
-
-  /* Theme toggle -------------------------------------------------- */
-
-  var toggle = document.querySelector('.theme-toggle');
-
-  function currentTheme() {
-    return root.dataset.theme === 'dark' ? 'dark' : 'light';
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var next = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.dataset.theme = next;
-      try {
-        localStorage.setItem('theme', next);
-      } catch (e) {
-        // Private browsing or blocked storage — the toggle still works
-        // for this page view, it just won't be remembered.
-      }
-    });
-  }
-
   /* Header border appears once the page scrolls ------------------- */
 
   var header = document.querySelector('.site-header');
