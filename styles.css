@@ -290,25 +290,8 @@ code {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;   /* one publication per row */
-  gap: 1rem;
-}
-
-/* Wide screens: image on the left, text on the right. */
-@media (min-width: 46rem) {
-  .card-featured {
-    display: grid;
-    grid-template-columns: 17rem minmax(0, 1fr);
-    column-gap: 1.5rem;
-    row-gap: .75rem;
-    align-content: start;
-  }
-  .card-featured > * { grid-column: 2; }
-  .card-featured > .card-media {
-    grid-column: 1;
-    grid-row: 1 / span 5;
-    align-self: start;
-  }
+  grid-template-columns: 1fr;   /* one publication per row, stacked: image, then text */
+  gap: 1.5rem;
 }
 
 .card {
@@ -334,7 +317,7 @@ code {
 }
 .card-media img {
   width: 100%;
-  max-height: 15rem;      /* keeps near-square diagrams from dominating the card */
+  max-height: 22rem;      /* keeps near-square diagrams from dominating the card */
   object-fit: contain;
 }
 
