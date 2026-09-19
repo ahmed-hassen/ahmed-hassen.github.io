@@ -10,8 +10,7 @@
   var toggle = document.querySelector('.theme-toggle');
 
   function currentTheme() {
-    if (root.dataset.theme) return root.dataset.theme;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return root.dataset.theme === 'dark' ? 'dark' : 'light';
   }
 
   if (toggle) {
