@@ -30,7 +30,7 @@
     <a class="nav-brand" href="#top">Ahmed Yimam Hassen</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -50,7 +50,7 @@
       take them apart to see how they work.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#projects">See my work</a>
+      <a class="btn btn-primary" href="#publications">See my work</a>
       <a class="btn" href="#contact">Get in touch</a>
     </div>
   </section>
@@ -85,8 +85,8 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <h2 class="section-title">Projects</h2>
+  <section class="section" id="publications">
+    <h2 class="section-title">Publications</h2>
     <div class="cards">
 
       <article class="card card-featured">
@@ -94,7 +94,7 @@
           <img src="lanet-main.jpg" width="574" height="204" loading="lazy"
                alt="LANet architecture: input, stem, MBConv stages, an efficient transformer stage, two channel attention modules and a segmentation head">
         </a>
-        <h3 class="card-title">LANet: Lightweight Segmentation for Automated Facade Installation</h3>
+        <h3 class="card-title">Lightweight segmentation model for automated facade installation in high-rise buildings</h3>
         <p class="card-body">
           A lightweight attention network that segments curtain wall module
           frames so a robot can find installation locations on high-rise
@@ -113,35 +113,26 @@
         </div>
       </article>
 
-      <article class="card">
-        <h3 class="card-title">Project Two</h3>
+      <article class="card card-featured">
+        <a class="card-media" href="6d-pose.pdf">
+          <img src="6d-pose.jpg" width="490" height="483" loading="lazy"
+               alt="Two-stage pipeline: LANet segments the input image, then rule-based corner extraction and a PnP solver estimate the reference panel pose, which is propagated to the target slot">
+        </a>
+        <h3 class="card-title">Lightweight vision-based 6D pose estimation of curtain wall module installation slot</h3>
         <p class="card-body">
-          Another project. If you have a screenshot, drop it in an
-          <code>images/</code> folder and add an <code>&lt;img&gt;</code> above
-          this title.
+          A two-stage pipeline for locating where a curtain wall module goes.
+          LANet segments the scene, corners are extracted with a rule-based
+          algorithm, and a PnP solver estimates the pose of a reference panel,
+          which is propagated to the target installation slot.
         </p>
         <ul class="tags tags-sm">
-          <li>Python</li>
-          <li>PostgreSQL</li>
+          <li>6D pose estimation</li>
+          <li>PnP</li>
+          <li>Construction robotics</li>
         </ul>
         <div class="card-links">
-          <a href="#">Source</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3 class="card-title">Project Three</h3>
-        <p class="card-body">
-          Three or four projects is plenty. Depth beats a long list &mdash; pick
-          the ones you can talk about for ten minutes.
-        </p>
-        <ul class="tags tags-sm">
-          <li>Node.js</li>
-          <li>Docker</li>
-        </ul>
-        <div class="card-links">
-          <a href="#">Source</a>
-          <a href="#">Write-up</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0957417426027818" target="_blank" rel="noopener">Read the paper</a>
+          <a href="6d-pose.pdf">PDF</a>
         </div>
       </article>
 
