@@ -19,7 +19,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
@@ -239,15 +239,16 @@
         <div class="timeline-body">
           <h3 class="timeline-role">Ph.D. Researcher</h3>
           <p class="timeline-org">Monash University, Australia</p>
-          <p class="timeline-desc">
-            Robot perception and control for curtain wall installation. Built
-            LANet (84.26% mIoU, 262 FPS), a markerless 6D pose pipeline
-            (2.24 mm median in-plane error), and a safety-aware reinforcement
-            learning framework for variable admittance control. The selected
-            SAC policy reached 93.8% success and transferred zero-shot to a UR5
-            testbed. Built simulation environments in MuJoCo and Gymnasium and
-            collected the training datasets.
-          </p>
+          <ul class="timeline-list">
+            <li>Present research progress and findings in regular meetings with supervisors, incorporating feedback to refine research direction and methodology.</li>
+            <li>Present research findings at academic conferences and to lab visitors, communicating technical results to both specialist and broader audiences.</li>
+            <li>Developed a lightweight semantic segmentation network (LANet) for curtain wall frame detection, achieving 84.26% mIoU at 1.92M parameters and 262 FPS (GPU) &mdash; matching heavier baselines at 1/7th the parameter count for on-site edge deployment.</li>
+            <li>Built a markerless, monocular 6D pose estimation pipeline for robotic facade assembly, reaching 2.24 mm median in-plane and 11.59 mm median 3D translation error with 4.91&deg; median orientation error across 36 target cases, and reduced downstream PnP solver error by 6.7&times; (translation) and 14.3&times; (rotation) via a learned SE(3) residual correction network.</li>
+            <li>Designed a safety-aware reinforcement learning framework for variable admittance control in contact-rich assembly, benchmarking SAC, PPO, TD3, and DDPG; the selected SAC policy reached 93.8% success and transferred zero-shot to a UR5 testbed.</li>
+            <li>Developed high-fidelity, simulation-based robotic environments using MuJoCo, Gymnasium, and Python to test contact-rich manipulation and assembly tasks.</li>
+            <li>Author peer-reviewed journal and conference papers on robotic perception, pose estimation, and manipulation, managing the full publication process from experimentation to submission and revision.</li>
+            <li>Collected and annotated image and sensor datasets (10,000-sample pose-error set; 9,191-image hybrid segmentation set) to train and validate computer vision and semantic segmentation models.</li>
+          </ul>
         </div>
       </li>
 

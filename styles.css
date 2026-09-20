@@ -479,6 +479,15 @@ code {
   font-weight: 500;
 }
 
+.timeline-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: .925rem;
+}
+.timeline-list li { margin-bottom: .4rem; }
+.timeline-list li:last-child { margin-bottom: 0; }
+
 .timeline-desc {
   margin: 0;
   color: var(--text-muted);
